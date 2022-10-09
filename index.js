@@ -58,6 +58,7 @@ app.post('/', (req, res) => {
     res.json({
       rs:false,
     });
+      return
     }
   else {
        res.json({
@@ -119,6 +120,7 @@ app.put('/:id', (req, res) => {
     res.json({
       rs: false,
     });
+      return
   } else {
     res.json({
       rs: true,
