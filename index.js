@@ -1,11 +1,13 @@
 const express = require('express');
 const fs = require('fs');
+const cors = require('cors');
 
 const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
 
 const app = express();
 
 app.use(express.json());
+app.use(cors())
 
 app.get('/', (req, res) => {
     const { author, message } = req.query 
@@ -134,6 +136,6 @@ app.put('/:id', (req, res) => {
  
 });
 
-app.listen(3000, () => {
+app.listen(8080, () => {
   console.log('서버 시작');
 });
