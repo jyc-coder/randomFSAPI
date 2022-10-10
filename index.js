@@ -58,13 +58,13 @@ app.post('/', (req, res) => {
   const {author, message} = req.body;
   if (!(author && author.length > 0 && message && message.length > 0)) {
     res.json({
-      rs:false,
+      re:false,
     });
       return
     }
   else {
        res.json({
-         rs: true,
+         re: true,
        });
     }
   data.push({
@@ -120,12 +120,12 @@ app.put('/:id', (req, res) => {
     
   if (!(author && author.length > 0 && message && message.length > 0)) {
     res.json({
-      rs: false,
+      re: false,
     });
       return
   } else {
     res.json({
-      rs: true,
+      re: true,
     });
     }
     
